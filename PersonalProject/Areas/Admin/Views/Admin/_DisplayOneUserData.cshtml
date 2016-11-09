@@ -1,0 +1,15 @@
+﻿
+@model PersonalProject.Models.Registration
+
+
+<h3>Ici j'affiche mon formulaire d'édition</h3>
+
+@using (Html.BeginForm("ValidateEdit","Admin", new{id = Model.Id}, FormMethod.Post, null)) { 
+@Html.LabelFor(x => x.UserName)
+@Html.TextBoxFor(x => x.UserName)<br />
+
+@Html.LabelFor(x => x.Password)
+@Html.TextBoxFor(x => x.Password)<br />
+
+<button type="submit">Test</button>
+}

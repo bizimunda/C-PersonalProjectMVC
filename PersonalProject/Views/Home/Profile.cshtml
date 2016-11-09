@@ -1,0 +1,33 @@
+﻿@model PersonalProject.Models.Registration
+
+@{
+    ViewBag.Title = "Profile";
+}
+
+<h2>Profile</h2>
+
+<div class="col-lg-6">
+    <table>
+
+            <tr>
+
+                <td>@Model.UserName</td>
+                <td>@Model.Password</td>
+                <td>@Model.FirstName</td>
+                <td>@Model.LastName</td>
+                <td>@Model.Adress</td>
+                <td>@Model.Email</td>
+                <td>@Ajax.ActionLink("Edit", "DisplayProfile", new { id = Model.Id }, new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "edit" }) </td>
+            </tr>
+
+        
+
+
+    </table>
+</div>
+
+
+<div class="col-lg-6" id="edit">
+    @* PARTIAL VUE INSERTION *@
+</div>
+

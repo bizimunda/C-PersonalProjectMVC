@@ -1,0 +1,26 @@
+﻿@model PersonalProject.Models.Registration
+
+@{
+    ViewBag.Title = "Connection";
+}
+
+<h2>Connection</h2>
+@using (Html.BeginForm("Connection", "Home", FormMethod.Post, null))
+
+{
+
+<p>
+    User Name: @Html.TextBoxFor(x => x.UserName)
+</p>
+
+<p>
+    Password: @Html.TextBoxFor(x => x.Password)
+</p>
+
+<input type="submit" value="Login" />
+    
+    
+<form action=~/Views/Home/Welcome.cshtml method="get"></form>
+<div>@Html.ValidationSummary()</div>
+
+}
